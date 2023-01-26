@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230125 21:36:53.440" rpa="false" schemaversion="3">
+<suite id="s1" name="Modelo" source="C:\Users\sp-xa\OneDrive\Área de Trabalho\Desafio QA\modelo.robot">
+<test id="s1-t1" name="Cenário 1: Acessando o Cep Valido" line="30">
+<kw name="abrir consulta cep">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://apicep.com/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 21:36:53.627" level="INFO">Opening browser 'firefox' to base url 'https://apicep.com/'.</msg>
+<msg timestamp="20230125 21:36:53.629" level="INFO">Firefox driver log is always forced to to: C:\Users\sp-xa\OneDrive\Área de Trabalho\Desafio QA\geckodriver-47.log</msg>
+<status status="PASS" starttime="20230125 21:36:53.627" endtime="20230125 21:36:59.732"/>
+</kw>
+<status status="PASS" starttime="20230125 21:36:53.627" endtime="20230125 21:36:59.732"/>
+</kw>
+<kw name="selecionando delay">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>3.0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230125 21:36:59.736" endtime="20230125 21:36:59.737"/>
+</kw>
+<status status="PASS" starttime="20230125 21:36:59.736" endtime="20230125 21:36:59.737"/>
+</kw>
+<kw name="selecionar cep">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>inputcep</arg>
+<arg>${cep_ok}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 21:36:59.738" level="INFO">Typing text '21240-050' into text field 'inputcep'.</msg>
+<status status="PASS" starttime="20230125 21:36:59.737" endtime="20230125 21:37:08.774"/>
+</kw>
+<status status="PASS" starttime="20230125 21:36:59.737" endtime="20230125 21:37:08.774"/>
+</kw>
+<kw name="selecionando delay">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>3.0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230125 21:37:08.774" endtime="20230125 21:37:08.775"/>
+</kw>
+<status status="PASS" starttime="20230125 21:37:08.774" endtime="20230125 21:37:08.775"/>
+</kw>
+<kw name="clicar button">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>btnbuscarcep</arg>
+<arg>enter</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230125 21:37:08.775" level="INFO">Sending key(s) ('enter',) to btnbuscarcep element.</msg>
+<msg timestamp="20230125 21:37:15.065" level="INFO">Sending keys enter</msg>
+<status status="PASS" starttime="20230125 21:37:08.775" endtime="20230125 21:37:18.072"/>
+</kw>
+<status status="PASS" starttime="20230125 21:37:08.775" endtime="20230125 21:37:18.072"/>
+</kw>
+<kw name="selecionando delay">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>3.0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230125 21:37:18.073" endtime="20230125 21:37:18.073"/>
+</kw>
+<status status="PASS" starttime="20230125 21:37:18.073" endtime="20230125 21:37:18.073"/>
+</kw>
+<kw name="condition">
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${vazio}</var>
+<arg>outputcep</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230125 21:37:24.085" level="INFO">${vazio} = None</msg>
+<status status="PASS" starttime="20230125 21:37:18.073" endtime="20230125 21:37:24.085"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${vazio}</arg>
+<arg>${return_ok}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230125 21:37:24.086" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<msg timestamp="20230125 21:37:24.086" level="FAIL">None != Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</msg>
+<status status="FAIL" starttime="20230125 21:37:24.085" endtime="20230125 21:37:24.086"/>
+</kw>
+<status status="FAIL" starttime="20230125 21:37:18.073" endtime="20230125 21:37:24.086"/>
+</kw>
+<status status="FAIL" starttime="20230125 21:36:53.626" endtime="20230125 21:37:24.086">None != Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</status>
+</test>
+<status status="FAIL" starttime="20230125 21:36:53.442" endtime="20230125 21:37:24.087"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Modelo">Modelo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
