@@ -11,7 +11,7 @@ ${return_ok}    Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ
 
 *** Keywords ***
 abrir consulta cep
-    Open Browser  https://apicep.com/
+    Open Browser  https://apicep.com/api-de-consulta/
 selecionar cep
     Input Text    inputcep    ${cep_ok}
 clicar button
