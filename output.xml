@@ -1,94 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230125 21:36:53.440" rpa="false" schemaversion="3">
-<suite id="s1" name="Modelo" source="C:\Users\sp-xa\OneDrive\Área de Trabalho\Desafio QA\modelo.robot">
-<test id="s1-t1" name="Cenário 1: Acessando o Cep Valido" line="30">
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230126 22:20:55.902" rpa="false" schemaversion="3">
+<suite id="s1" name="Modelo" source="C:\Users\sp-xa\OneDrive\Área de Trabalho\desafio_qa\modelo.robot">
+<test id="s1-t1" name="Cenário 1: Acessando o Cep Valido" line="31">
 <kw name="abrir consulta cep">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://apicep.com/</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230125 21:36:53.627" level="INFO">Opening browser 'firefox' to base url 'https://apicep.com/'.</msg>
-<msg timestamp="20230125 21:36:53.629" level="INFO">Firefox driver log is always forced to to: C:\Users\sp-xa\OneDrive\Área de Trabalho\Desafio QA\geckodriver-47.log</msg>
-<status status="PASS" starttime="20230125 21:36:53.627" endtime="20230125 21:36:59.732"/>
+<msg timestamp="20230126 22:20:56.070" level="INFO">Opening browser 'firefox' to base url 'https://apicep.com/'.</msg>
+<msg timestamp="20230126 22:20:56.071" level="INFO">Firefox driver log is always forced to to: C:\Users\sp-xa\OneDrive\Área de Trabalho\desafio_qa\geckodriver-5.log</msg>
+<status status="PASS" starttime="20230126 22:20:56.070" endtime="20230126 22:21:03.324"/>
 </kw>
-<status status="PASS" starttime="20230125 21:36:53.627" endtime="20230125 21:36:59.732"/>
-</kw>
-<kw name="selecionando delay">
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>3.0</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230125 21:36:59.736" endtime="20230125 21:36:59.737"/>
-</kw>
-<status status="PASS" starttime="20230125 21:36:59.736" endtime="20230125 21:36:59.737"/>
+<status status="PASS" starttime="20230126 22:20:56.070" endtime="20230126 22:21:03.324"/>
 </kw>
 <kw name="selecionar cep">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>inputcep</arg>
 <arg>${cep_ok}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230125 21:36:59.738" level="INFO">Typing text '21240-050' into text field 'inputcep'.</msg>
-<status status="PASS" starttime="20230125 21:36:59.737" endtime="20230125 21:37:08.774"/>
+<msg timestamp="20230126 22:21:03.325" level="INFO">Typing text '21240-050' into text field 'inputcep'.</msg>
+<status status="PASS" starttime="20230126 22:21:03.325" endtime="20230126 22:21:03.369"/>
 </kw>
-<status status="PASS" starttime="20230125 21:36:59.737" endtime="20230125 21:37:08.774"/>
-</kw>
-<kw name="selecionando delay">
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>3.0</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230125 21:37:08.774" endtime="20230125 21:37:08.775"/>
-</kw>
-<status status="PASS" starttime="20230125 21:37:08.774" endtime="20230125 21:37:08.775"/>
+<status status="PASS" starttime="20230126 22:21:03.325" endtime="20230126 22:21:03.369"/>
 </kw>
 <kw name="clicar button">
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>btnbuscarcep</arg>
 <arg>enter</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20230125 21:37:08.775" level="INFO">Sending key(s) ('enter',) to btnbuscarcep element.</msg>
-<msg timestamp="20230125 21:37:15.065" level="INFO">Sending keys enter</msg>
-<status status="PASS" starttime="20230125 21:37:08.775" endtime="20230125 21:37:18.072"/>
+<msg timestamp="20230126 22:21:03.370" level="INFO">Sending key(s) ('enter',) to btnbuscarcep element.</msg>
+<msg timestamp="20230126 22:21:03.652" level="INFO">Sending keys enter</msg>
+<status status="PASS" starttime="20230126 22:21:03.370" endtime="20230126 22:21:03.657"/>
 </kw>
-<status status="PASS" starttime="20230125 21:37:08.775" endtime="20230125 21:37:18.072"/>
+<status status="PASS" starttime="20230126 22:21:03.369" endtime="20230126 22:21:03.657"/>
 </kw>
 <kw name="selecionando delay">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>3.0</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230125 21:37:18.073" endtime="20230125 21:37:18.073"/>
+<status status="PASS" starttime="20230126 22:21:03.658" endtime="20230126 22:21:03.658"/>
 </kw>
-<status status="PASS" starttime="20230125 21:37:18.073" endtime="20230125 21:37:18.073"/>
+<status status="PASS" starttime="20230126 22:21:03.658" endtime="20230126 22:21:03.658"/>
 </kw>
 <kw name="condition">
-<kw name="Get Value" library="SeleniumLibrary">
-<var>${vazio}</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${element}</var>
 <arg>outputcep</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<msg timestamp="20230125 21:37:24.085" level="INFO">${vazio} = None</msg>
-<status status="PASS" starttime="20230125 21:37:18.073" endtime="20230125 21:37:24.085"/>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230126 22:21:09.675" level="INFO">${element} = Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</msg>
+<status status="PASS" starttime="20230126 22:21:03.659" endtime="20230126 22:21:09.675"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${vazio}</arg>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${element}</arg>
 <arg>${return_ok}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230125 21:37:24.086" level="INFO">Argument types are:
-&lt;class 'NoneType'&gt;
-&lt;class 'str'&gt;</msg>
-<msg timestamp="20230125 21:37:24.086" level="FAIL">None != Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</msg>
-<status status="FAIL" starttime="20230125 21:37:24.085" endtime="20230125 21:37:24.086"/>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230126 22:21:09.675" endtime="20230126 22:21:09.676"/>
 </kw>
-<status status="FAIL" starttime="20230125 21:37:18.073" endtime="20230125 21:37:24.086"/>
+<status status="PASS" starttime="20230126 22:21:03.659" endtime="20230126 22:21:09.676"/>
 </kw>
-<status status="FAIL" starttime="20230125 21:36:53.626" endtime="20230125 21:37:24.086">None != Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</status>
+<status status="PASS" starttime="20230126 22:20:56.069" endtime="20230126 22:21:09.676"/>
 </test>
-<status status="FAIL" starttime="20230125 21:36:53.442" endtime="20230125 21:37:24.087"/>
+<test id="s1-t2" name="Cenário 2: Acessando o Cep Invalido" line="39">
+<kw name="abrir consulta cep">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://apicep.com/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230126 22:21:09.678" level="INFO">Opening browser 'firefox' to base url 'https://apicep.com/'.</msg>
+<msg timestamp="20230126 22:21:09.679" level="INFO">Firefox driver log is always forced to to: C:\Users\sp-xa\OneDrive\Área de Trabalho\desafio_qa\geckodriver-6.log</msg>
+<status status="PASS" starttime="20230126 22:21:09.678" endtime="20230126 22:21:19.630"/>
+</kw>
+<status status="PASS" starttime="20230126 22:21:09.677" endtime="20230126 22:21:19.630"/>
+</kw>
+<kw name="selecionar cep errado">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>inputcep</arg>
+<arg>${cep_fail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230126 22:21:19.631" level="INFO">Typing text '21240-584' into text field 'inputcep'.</msg>
+<status status="PASS" starttime="20230126 22:21:19.630" endtime="20230126 22:21:28.665"/>
+</kw>
+<status status="PASS" starttime="20230126 22:21:19.630" endtime="20230126 22:21:28.665"/>
+</kw>
+<kw name="clicar button">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>btnbuscarcep</arg>
+<arg>enter</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230126 22:21:28.666" level="INFO">Sending key(s) ('enter',) to btnbuscarcep element.</msg>
+<msg timestamp="20230126 22:21:34.960" level="INFO">Sending keys enter</msg>
+<status status="PASS" starttime="20230126 22:21:28.665" endtime="20230126 22:21:37.966"/>
+</kw>
+<status status="PASS" starttime="20230126 22:21:28.665" endtime="20230126 22:21:37.966"/>
+</kw>
+<kw name="selecionando delay">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>3.0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230126 22:21:37.967" endtime="20230126 22:21:37.967"/>
+</kw>
+<status status="PASS" starttime="20230126 22:21:37.967" endtime="20230126 22:21:37.967"/>
+</kw>
+<kw name="condition">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${element}</var>
+<arg>outputcep</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230126 22:21:43.984" level="INFO">${element} = CEP não encontrado</msg>
+<status status="PASS" starttime="20230126 22:21:37.967" endtime="20230126 22:21:43.984"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${element}</arg>
+<arg>${return_ok}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20230126 22:21:43.985" level="FAIL">CEP não encontrado != Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</msg>
+<status status="FAIL" starttime="20230126 22:21:43.984" endtime="20230126 22:21:43.985"/>
+</kw>
+<status status="FAIL" starttime="20230126 22:21:37.967" endtime="20230126 22:21:43.985"/>
+</kw>
+<status status="FAIL" starttime="20230126 22:21:09.677" endtime="20230126 22:21:43.985">CEP não encontrado != Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</status>
+</test>
+<status status="FAIL" starttime="20230126 22:20:55.903" endtime="20230126 22:21:43.986"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Modelo">Modelo</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="Modelo">Modelo</stat>
 </suite>
 </statistics>
 <errors>
