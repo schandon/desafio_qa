@@ -2,6 +2,10 @@
 
 ## Arquivo de Configuração:
 
+Nos testes utilizamos o navegador Firefox, caso não tenha na sua maquina você pode baixar no link abaixo.
+
+https://www.mozilla.org/pt-BR/firefox/download/thanks/
+
 ### Instalação Python.
 
 Iniciando o processo de documentação. Vamos começar baixando o Python neste site a seguir, Estamos utilizando nos testes a versão 3.11.1 do python. 
