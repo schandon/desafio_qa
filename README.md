@@ -4,7 +4,7 @@
 
 Nos testes utilizamos o navegador Firefox, caso não tenha na sua maquina você pode baixar no link abaixo.
 
-https://www.mozilla.org/pt-BR/firefox/download/thanks/
+[Downliad FireFox](https://www.mozilla.org/pt-BR/firefox/download/thanks/)
 
 ### Instalação Python.
 
@@ -18,7 +18,7 @@ Iniciando o processo de documentação. Vamos começar baixando o Python neste s
 
 Após a instalação do Python iremos baixar o WebDriver neste link a seguir. 
 
-[](https://chromedriver.storage.googleapis.com/index.html?path=110.0.5481.30/)
+[Download WebDriver](https://chromedriver.storage.googleapis.com/index.html?path=110.0.5481.30/)
 
 Com o arquivo do WebDriver baixado, iremos extrai-lo e colocar na pastas de scripts do Python. A pasta de scripts do Python você pega nas variáveis de ambiente do Windows, seguindo neste caminho
 
