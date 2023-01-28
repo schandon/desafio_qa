@@ -1,8 +1,4 @@
-# Desafio QA
-
-Data de Entrega: 01/02 
-
-## Desafio 01 - Planejamento de Testes
+# Desafio 01 - Planejamento de Testes
 
 ## Arquivo de Configuração:
 
