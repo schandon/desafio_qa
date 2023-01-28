@@ -1,124 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230128 10:43:37.390" rpa="false" schemaversion="3">
-<suite id="s1" name="Modelo" source="C:\Users\Alexandre\Desktop\desafio_qa\modelo.robot">
-<test id="s1-t1" name="Cenário 1: Acessando o Cep Valido" line="31">
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230128 13:39:00.844" rpa="false" schemaversion="3">
+<suite id="s1" name="Modelo" source="C:\Users\sp-xa\OneDrive\Área de Trabalho\desafio_qa\modelo.robot">
+<test id="s1-t1" name="Cenário 1: Acessando o Cep Valido" line="27">
 <kw name="abrir consulta cep">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://apicep.com/</arg>
+<arg>${URL}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230128 10:43:38.030" level="INFO">Opening browser 'firefox' to base url 'https://apicep.com/'.</msg>
-<msg timestamp="20230128 10:43:38.043" level="INFO">Firefox driver log is always forced to to: C:\Users\Alexandre\Desktop\desafio_qa\geckodriver-1.log</msg>
-<status status="PASS" starttime="20230128 10:43:38.030" endtime="20230128 10:43:50.340"/>
+<msg timestamp="20230128 13:39:01.007" level="INFO">Opening browser 'firefox' to base url 'https://apicep.com/'.</msg>
+<msg timestamp="20230128 13:39:01.013" level="INFO">Firefox driver log is always forced to to: C:\Users\sp-xa\OneDrive\Área de Trabalho\desafio_qa\geckodriver-7.log</msg>
+<status status="PASS" starttime="20230128 13:39:01.007" endtime="20230128 13:39:09.552"/>
 </kw>
-<status status="PASS" starttime="20230128 10:43:38.029" endtime="20230128 10:43:50.340"/>
+<status status="PASS" starttime="20230128 13:39:01.007" endtime="20230128 13:39:09.552"/>
 </kw>
 <kw name="selecionar cep">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>inputcep</arg>
-<arg>${cep_ok}</arg>
+<arg>${cep_valido}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230128 10:43:50.367" level="INFO">Typing text '21240-050' into text field 'inputcep'.</msg>
-<status status="PASS" starttime="20230128 10:43:50.365" endtime="20230128 10:43:50.518"/>
+<msg timestamp="20230128 13:39:09.553" level="INFO">Typing text '21240-050' into text field 'inputcep'.</msg>
+<status status="PASS" starttime="20230128 13:39:09.553" endtime="20230128 13:39:09.666"/>
 </kw>
-<status status="PASS" starttime="20230128 10:43:50.365" endtime="20230128 10:43:50.519"/>
+<status status="PASS" starttime="20230128 13:39:09.552" endtime="20230128 13:39:09.666"/>
 </kw>
 <kw name="clicar button">
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>btnbuscarcep</arg>
 <arg>enter</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20230128 10:43:50.525" level="INFO">Sending key(s) ('enter',) to btnbuscarcep element.</msg>
-<msg timestamp="20230128 10:43:50.842" level="INFO">Sending keys enter</msg>
-<status status="PASS" starttime="20230128 10:43:50.524" endtime="20230128 10:43:50.860"/>
+<msg timestamp="20230128 13:39:09.667" level="INFO">Sending key(s) ('enter',) to btnbuscarcep element.</msg>
+<msg timestamp="20230128 13:39:09.965" level="INFO">Sending keys enter</msg>
+<status status="PASS" starttime="20230128 13:39:09.667" endtime="20230128 13:39:09.971"/>
 </kw>
-<status status="PASS" starttime="20230128 10:43:50.523" endtime="20230128 10:43:50.861"/>
+<status status="PASS" starttime="20230128 13:39:09.666" endtime="20230128 13:39:09.971"/>
 </kw>
-<kw name="selecionando delay">
+<kw name="esperando">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>3.0</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230128 10:43:50.862" endtime="20230128 10:43:50.863"/>
+<status status="PASS" starttime="20230128 13:39:09.971" endtime="20230128 13:39:09.972"/>
 </kw>
-<status status="PASS" starttime="20230128 10:43:50.862" endtime="20230128 10:43:50.863"/>
+<status status="PASS" starttime="20230128 13:39:09.971" endtime="20230128 13:39:09.972"/>
 </kw>
-<kw name="condition">
+<kw name="Validação CEP">
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${element}</var>
 <arg>outputcep</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230128 10:43:56.921" level="INFO">${element} = Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</msg>
-<status status="PASS" starttime="20230128 10:43:50.864" endtime="20230128 10:43:56.921"/>
+<msg timestamp="20230128 13:39:15.989" level="INFO">${element} = Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</msg>
+<status status="PASS" starttime="20230128 13:39:09.972" endtime="20230128 13:39:15.989"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${element}</arg>
-<arg>${return_ok}</arg>
+<arg>${return_}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230128 10:43:56.921" endtime="20230128 10:43:56.922"/>
+<status status="PASS" starttime="20230128 13:39:15.989" endtime="20230128 13:39:15.989"/>
 </kw>
-<status status="PASS" starttime="20230128 10:43:50.863" endtime="20230128 10:43:56.923"/>
+<status status="PASS" starttime="20230128 13:39:09.972" endtime="20230128 13:39:15.990"/>
 </kw>
-<status status="PASS" starttime="20230128 10:43:38.027" endtime="20230128 10:43:56.924"/>
+<status status="PASS" starttime="20230128 13:39:01.006" endtime="20230128 13:39:15.990"/>
 </test>
-<test id="s1-t2" name="Cenário 2: Acessando o Cep Invalido" line="39">
+<test id="s1-t2" name="Cenário 2: Acessando o Cep Invalido" line="35">
 <kw name="abrir consulta cep">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://apicep.com/</arg>
+<arg>${URL}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230128 10:43:56.932" level="INFO">Opening browser 'firefox' to base url 'https://apicep.com/'.</msg>
-<msg timestamp="20230128 10:43:56.934" level="INFO">Firefox driver log is always forced to to: C:\Users\Alexandre\Desktop\desafio_qa\geckodriver-2.log</msg>
-<status status="PASS" starttime="20230128 10:43:56.931" endtime="20230128 10:44:08.327"/>
+<msg timestamp="20230128 13:39:15.991" level="INFO">Opening browser 'firefox' to base url 'https://apicep.com/'.</msg>
+<msg timestamp="20230128 13:39:15.992" level="INFO">Firefox driver log is always forced to to: C:\Users\sp-xa\OneDrive\Área de Trabalho\desafio_qa\geckodriver-8.log</msg>
+<status status="PASS" starttime="20230128 13:39:15.991" endtime="20230128 13:39:25.858"/>
 </kw>
-<status status="PASS" starttime="20230128 10:43:56.930" endtime="20230128 10:44:08.327"/>
+<status status="PASS" starttime="20230128 13:39:15.991" endtime="20230128 13:39:25.858"/>
 </kw>
 <kw name="selecionar cep errado">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>inputcep</arg>
-<arg>${cep_fail}</arg>
+<arg>${cep_invalido}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230128 10:44:08.331" level="INFO">Typing text '21240-584' into text field 'inputcep'.</msg>
-<status status="PASS" starttime="20230128 10:44:08.329" endtime="20230128 10:44:17.464"/>
+<msg timestamp="20230128 13:39:25.859" level="INFO">Typing text '21240-584' into text field 'inputcep'.</msg>
+<status status="PASS" starttime="20230128 13:39:25.859" endtime="20230128 13:39:34.891"/>
 </kw>
-<status status="PASS" starttime="20230128 10:44:08.329" endtime="20230128 10:44:17.464"/>
+<status status="PASS" starttime="20230128 13:39:25.859" endtime="20230128 13:39:34.891"/>
 </kw>
 <kw name="clicar button">
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>btnbuscarcep</arg>
 <arg>enter</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20230128 10:44:17.466" level="INFO">Sending key(s) ('enter',) to btnbuscarcep element.</msg>
-<msg timestamp="20230128 10:44:23.824" level="INFO">Sending keys enter</msg>
-<status status="PASS" starttime="20230128 10:44:17.465" endtime="20230128 10:44:26.853"/>
+<msg timestamp="20230128 13:39:34.892" level="INFO">Sending key(s) ('enter',) to btnbuscarcep element.</msg>
+<msg timestamp="20230128 13:39:41.186" level="INFO">Sending keys enter</msg>
+<status status="PASS" starttime="20230128 13:39:34.892" endtime="20230128 13:39:44.193"/>
 </kw>
-<status status="PASS" starttime="20230128 10:44:17.464" endtime="20230128 10:44:26.853"/>
+<status status="PASS" starttime="20230128 13:39:34.892" endtime="20230128 13:39:44.193"/>
 </kw>
-<kw name="selecionando delay">
+<kw name="esperando">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>3.0</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230128 10:44:26.855" endtime="20230128 10:44:26.856"/>
+<status status="PASS" starttime="20230128 13:39:44.193" endtime="20230128 13:39:44.193"/>
 </kw>
-<status status="PASS" starttime="20230128 10:44:26.855" endtime="20230128 10:44:26.856"/>
+<status status="PASS" starttime="20230128 13:39:44.193" endtime="20230128 13:39:44.193"/>
 </kw>
-<kw name="condition">
+<kw name="Validação CEP">
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${element}</var>
 <arg>outputcep</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230128 10:44:32.921" level="INFO">${element} = CEP não encontrado</msg>
-<status status="PASS" starttime="20230128 10:44:26.859" endtime="20230128 10:44:32.921"/>
+<msg timestamp="20230128 13:39:50.209" level="INFO">${element} = CEP não encontrado</msg>
+<status status="PASS" starttime="20230128 13:39:44.194" endtime="20230128 13:39:50.209"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${element}</arg>
-<arg>${return_ok}</arg>
+<arg>${return_}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<msg timestamp="20230128 10:44:32.923" level="FAIL">CEP não encontrado != Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</msg>
-<status status="FAIL" starttime="20230128 10:44:32.921" endtime="20230128 10:44:32.923"/>
+<msg timestamp="20230128 13:39:50.209" level="FAIL">CEP não encontrado != Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</msg>
+<status status="FAIL" starttime="20230128 13:39:50.209" endtime="20230128 13:39:50.209"/>
 </kw>
-<status status="FAIL" starttime="20230128 10:44:26.858" endtime="20230128 10:44:32.923"/>
+<status status="FAIL" starttime="20230128 13:39:44.194" endtime="20230128 13:39:50.210"/>
 </kw>
-<status status="FAIL" starttime="20230128 10:43:56.929" endtime="20230128 10:44:32.925">CEP não encontrado != Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</status>
+<status status="FAIL" starttime="20230128 13:39:15.990" endtime="20230128 13:39:50.210">CEP não encontrado != Rua Plínio Barreto, Jardim América - Rio de Janeiro / RJ</status>
 </test>
-<status status="FAIL" starttime="20230128 10:43:37.395" endtime="20230128 10:44:32.932"/>
+<status status="FAIL" starttime="20230128 13:39:00.845" endtime="20230128 13:39:50.211"/>
 </suite>
 <statistics>
 <total>

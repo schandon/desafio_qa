@@ -1,22 +1,29 @@
 *** Settings ***
 Library    RequestsLibrary
+Library    Collections
+Library    SeleniumLibrary
 
 *** Variables ***
-# ${response_200}    Get    https://cdn.apicep.com/file/apicep/21240-050.json
-# ${response_400}    Get    https://cdn.apicep.com/file/apicep/21240-897.json
-${response.content}
-${json}    To Json    ${response.content}
+${cep_valido}        21240-050
+${cep_invalido}      21240-584
+${api}   https://cdn.apicep.com/file/apicep/
 *** Keywords ***
 Consultar CEP Ok
-    ${response_200}    Get    https://cdn.apicep.com/file/apicep/21240-050.json
+    Get ${api}${cep_valido}.json
 Consultar CEP Fail
-    ${response_400}    Get    https://cdn.apicep.com/file/apicep/21240-897.json
-
+    Get ${api}${cep_invalido}.json
+validando CEP   
+    ${status}        Get From Dictionary    ${api.json()}    status
+    Should Be Equal    ${status}    ok
 *** Test Cases ***
-Cenário 1: Acessando o Cep Valido
+Cenário 01:
     Consultar CEP Ok
-Cenário 2: Acessando o Cep Invalido
+    validando CEP
+
+Cenário 02:
     Consultar CEP Fail
+    validando CEP
+
 
 
 
